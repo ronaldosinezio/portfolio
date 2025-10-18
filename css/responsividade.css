@@ -1,0 +1,95 @@
+/* Aqui e para telas menores para Tablets */
+@media (max-width: 768px) {
+   
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-img {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        margin-bottom: 2rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-right {
+        margin-top: 2rem;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .projects-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+/* Aqui e para telas ainda menores de Celulares */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .skills-left, .skills-right {
+        width: 100%;
+    }
+
+    .service-card, .project-item {
+        width: 95%;
+    }
+
+    .contact-form {
+        width: 95%;
+    }
+
+    /* .footer-logo {
+        font-size: 1.8rem;
+    } */
+}

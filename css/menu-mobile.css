@@ -1,0 +1,144 @@
+/* Estilos para o menu mobile */
+
+.navbar {
+    position: relative;
+    background: #11213a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 70px;
+    z-index: 100;
+    border: none;
+}
+
+.logo {
+    position: relative;
+    z-index: 101;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 102;
+    transition: transform 0.3s;
+    background: none;
+    border: none;
+}
+
+.menu-icon .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 7px 0;
+    background: #00eaff;
+    /* border-radius: 2px; */
+    transition: 0.4s cubic-bezier(.77,0,.18,1);
+    border: none;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 0 1rem;
+        background: #11213a;
+    }
+    .logo {
+        margin: 1rem 0 0.5rem 0;
+        z-index: 101;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+    .nav-links {
+        width: 100%;
+        background: #11213a;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s cubic-bezier(.77,0,.18,1), opacity 0.3s ease-in-out;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin-top: 0.5rem;
+        border-radius: 0 0 16px 16px;
+    }
+    .nav-links.active {
+        max-height: 500px;
+        opacity: 1;
+        transition: max-height 0.5s cubic-bezier(.77,0,.18,1), opacity 0.3s ease-in-out;
+    }
+    .nav-links li {
+        /* margin: 1.2rem 0; */
+        width: 100%;
+        text-align: left;
+        margin-left: 2rem;
+
+    }
+    .nav-links a {
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        /* padding: 0.5rem 0; */
+        display: block;
+        transition: color 0.2s;
+        margin-left: 0.5rem;
+    }
+    .nav-links a:hover {
+        color: #00eaff;
+    }
+}
+
+/* Aqui é .hero para mobile */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .hero-content {
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        order: 0;
+        text-align: center;
+    }
+    .hero-img {
+        margin: 0 auto;
+        order: -1;
+    }
+    /* Centraliza ícones sociais no modo mobile */
+    .social-icons,
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+}
